@@ -39,7 +39,7 @@ namespace BojoBot
             {
                 var userRoles = e.User.Roles;
 
-                if (userRoles.Any(input => input.Name.ToUpper() == "HORSEBERIANS"))
+                if (userRoles.Any(input => input.Name.ToUpper() == "Teil"))
 
                     await e.Channel.SendMessage("This Easter Egg Was Inspired By @Teilio#9107: http://media2.giphy.com/media/atbiDI1fXpYUU/giphy.gif");
 
@@ -52,14 +52,6 @@ namespace BojoBot
             {
                 await e.Channel.SendMessage("Current Commands: InviteMe");
             });
-
-            commands = client.GetService<CommandService>();
-
-            commands.CreateCommand("HogosConfessionDial").Do(async (e) =>
-            {
-                await e.User.SendMessage(":middle_finger: You will never know my secrets, even if I am dead nobody will know any of them.");
-            });
-
 
             commands.CreateCommand("announce").Parameter("message", ParameterType.Multiple).Do(async (e) =>
             {
