@@ -53,6 +53,7 @@ namespace BojoBot
                 await e.Channel.SendMessage("Current Commands: InviteMe");
             });
 
+            #If you do $announce (Message) the bot will announce your message!
             commands.CreateCommand("announce").Parameter("message", ParameterType.Multiple).Do(async (e) =>
             {
                 await DoAnnouncement(e);
